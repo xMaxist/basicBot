@@ -183,7 +183,7 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/xMaxist/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         chat: null,
@@ -191,7 +191,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "b0ss",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             startupCap: 1, // 1-200
@@ -229,7 +229,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
+            motd: "ey b0ss, can i habe de pizza pls",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -244,8 +244,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/GravelCraft/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/GravelCraft/basicBot-customization/master/blacklists/ExampleOPlist.json",
+                overplayed: "https://rawgit.com/xMaxist/basicBot-customization/master/blacklists/OP"
             }
         },
         room: {
@@ -2636,6 +2637,19 @@
                     }
                 }
             },
+            
+            bot.commands.baconCommand = {
+            command: 'pizza',  //The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', //Minimum user permission to use the command
+            type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me ey b0ss can i habe pizza pls ");
+                }
+            }
+        };
 
             statusCommand: {
                 command: 'status',
