@@ -183,7 +183,7 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/xMaxist/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         chat: null,
@@ -191,7 +191,7 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "b0ss",
+            botName: "basicBot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             startupCap: 1, // 1-200
@@ -229,7 +229,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "ey b0ss, can i habe de pizza pls",
+            motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -244,9 +244,8 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/GravelCraft/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/GravelCraft/basicBot-customization/master/blacklists/ExampleOPlist.json",
-                overplayed: "https://rawgit.com/xMaxist/basicBot-customization/master/blacklists/OP"
+                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
@@ -2637,7 +2636,7 @@
                     }
                 }
             },
-         
+
             statusCommand: {
                 command: 'status',
                 rank: 'bouncer',
@@ -2905,7 +2904,6 @@
                              indexMuted = i;
                              wasMuted = true;
                              }
-
                              }
                              if (!wasMuted) return API.sendChat(subChat(basicBot.chat.notmuted, {name: chat.un}));
                              basicBot.room.mutedUsers.splice(indexMuted);
